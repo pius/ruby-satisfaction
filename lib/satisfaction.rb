@@ -11,6 +11,7 @@ class Satisfaction
   require 'satisfaction/resource'
   require 'satisfaction/loader'
   require 'satisfaction/identity_map'
+  require 'satisfaction/search'
   
   
   # =============
@@ -33,6 +34,7 @@ class Satisfaction
   attr_reader :consumer
   attr_reader :token
   attr_reader :identity_map
+  attr_reader :search
 
   
   def initialize(options={})
@@ -45,6 +47,7 @@ class Satisfaction
     })
     @loader = Sfn::Loader.new
     @identity_map = Sfn::IdentityMap.new
+    @search = Sfn::Search.new(options[:root], @loader)
     
     has_many :companies, :url => '/companies'
     has_many :people, :url => '/people'
