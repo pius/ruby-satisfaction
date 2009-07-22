@@ -5,6 +5,11 @@ begin
     gemspec.summary = "Ruby interface to Get Satisfaction"
     gemspec.description = "Ruby interface to Get Satisfaction"
     gemspec.email = "scott@getsatisfaction.com"
+<<<<<<< HEAD:Rakefile
+    gemspec.homepage = "http://github.com/pius/ruby-satisfaction"
+    gemspec.authors = ["Scott Fleckenstein", "Josh Nichols", "Pius Uzamere"]
+  end
+=======
     gemspec.homepage = "http://github.com/nullstyle/ruby-satisfaction"
     gemspec.authors = ["Scott Fleckenstein", "Josh Nichols", "Pius Uzamere"]
     gemspec.rubyforge_project = "satisfaction"
@@ -14,6 +19,7 @@ begin
   end
   
   Jeweler::RubyforgeTasks.new
+>>>>>>> 45bae53fc7f328e3fe1faf966d0d3f664659b5b0:Rakefile
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
 end
