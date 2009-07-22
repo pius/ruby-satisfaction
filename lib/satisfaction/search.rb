@@ -2,13 +2,14 @@ class Sfn::Search
   attr_reader :results, :root_url, :loader
   
   def initialize(root_url, loader)
-    @root_url = root_url
+    @root_url = root_url ? root_url : "http://api.getsatisfaction.com"
     @loader = loader
     @results = {}
   end
   
   def for_likely_matches_to(name, entities = %w(companies products))
     @results = entities.inject({}) {|hash, entity|
+      #raise @root_url.inspect
       query_string = "#{@root_url}/#{entity}.json?q=#{name}"
       #result = Net::HTTP.get_response(URI.parse(query_string)).body
       answer = @loader.get(query_string)
