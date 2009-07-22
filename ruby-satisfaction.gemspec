@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ruby-satisfaction}
-  s.version = "0.4.0"
+  s.version = "0.4.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Scott Fleckenstein", "Josh Nichols", "Pius Uzamere"]
-  s.date = %q{2009-07-10}
+  s.date = %q{2009-07-22}
   s.description = %q{Ruby interface to Get Satisfaction}
   s.email = %q{scott@getsatisfaction.com}
   s.extra_rdoc_files = [
@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
      "License.txt",
      "README.txt",
      "Rakefile",
+     "VERSION",
      "VERSION.yml",
      "init.rb",
      "lib/satisfaction.rb",
