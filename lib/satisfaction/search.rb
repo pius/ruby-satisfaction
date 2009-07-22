@@ -14,7 +14,8 @@ class Sfn::Search
       answer = @loader.get(query_string)
       if answer[0] == :ok
         result = answer[1]
-        hash.merge({entity => JSON.parse(result)})
+        #raise result.inspect
+        hash.merge({entity => JSON.parse(result)['data']})
       else
         raise "Search service not available at the moment, please try again later."
       end

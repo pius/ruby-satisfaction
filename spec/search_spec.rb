@@ -16,9 +16,8 @@ describe "Searching" do
   
   it "should put the results into a set of arrays keyed by category" do
     results = @satisfaction.search.for_likely_matches_to('Cyberdyne')
-
     c = results['companies']
     c.class.should == Array
-    include('companies')
   end
+  
 end
