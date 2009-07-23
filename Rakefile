@@ -22,7 +22,7 @@ begin
     gemspec.rubyforge_project = "satisfaction"
     gemspec.add_dependency('memcache-client', '>= 1.5.0')
     gemspec.add_dependency('oauth', '>= 0.3.5')
-    gemspec.add_dependency('activesupport', '>= 2.3.2')
+    #gemspec.add_dependency('activesupport', '>= 2.3.2')
   end
   
   Jeweler::RubyforgeTasks.new
