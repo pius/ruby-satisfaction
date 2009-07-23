@@ -65,15 +65,15 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<memcache-client>, [">= 1.5.0"])
       s.add_runtime_dependency(%q<oauth>, [">= 0.3.5"])
-      s.add_runtime_dependency(%q<activesupport>, [">= 2.3.2"])
+      #s.add_runtime_dependency(%q<activesupport>, [">= 2.3.2"]) #causing problems on Heroku for some reason
     else
       s.add_dependency(%q<memcache-client>, [">= 1.5.0"])
       s.add_dependency(%q<oauth>, [">= 0.3.5"])
-      s.add_dependency(%q<activesupport>, [">= 2.3.2"])
+      #s.add_dependency(%q<activesupport>, [">= 2.3.2"]) #causing problems on Heroku for some reason
     end
   else
     s.add_dependency(%q<memcache-client>, [">= 1.5.0"])
     s.add_dependency(%q<oauth>, [">= 0.3.5"])
-    s.add_dependency(%q<activesupport>, [">= 2.3.2"])
+    #s.add_dependency(%q<activesupport>, [">= 2.3.2"]) #causing problems on Heroku for some reason
   end
 end
