@@ -105,8 +105,16 @@ class Satisfaction
   end
   
   def access_token(token)
+    log = Logger.new(STDOUT)
+    log.level = Logger::INFO
+    log.info("Trying to retrieve access token ...")
     result, body = *@loader.get("#{options[:access_token_url]}", :force => true, :consumer => @consumer, :token => token)
-    raise "Could not retrieve access token" unless result == :ok
+    unless result == :ok
+      log.error("Could not retrieve access token!  Result was #{result} and the body was #{body}")
+      log.info("consumer was #{@consumer}")
+      raise "Could not retrieve access token" 
+    end
+    
     response = CGI.parse(body)
     OAuth::Token.new(response["oauth_token"], response["oauth_token_secret"])
   end
